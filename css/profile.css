@@ -191,12 +191,15 @@ input:checked + .slider:before {
 .share-btn:hover {
     background: #d4d4d4;
 }
+
+/* ===== Вкладки — исправленный отступ ===== */
 .profile-tabs {
     display: flex;
     gap: 12px;
-    margin-top: 30px;
-    padding: 0 40px;
+    margin-top: 16px;           /* было 30px — уменьшили */
+    padding: 0 40px 16px;       /* добавили отступ снизу */
 }
+
 .tab-btn {
     background: #e2e2e2;
     border: none;
@@ -329,16 +332,16 @@ input:checked + .slider:before {
         padding: 16px;
     }
     
-    /* ===== Главное исправление отступа ===== */
+    /* ===== Мобильные вкладки — исправленный отступ ===== */
     .profile-tabs {
-        padding: 0 16px;
+        padding: 0 16px 12px;      /* отступ снизу */
         justify-content: center;
-        margin-top: 28px;          /* увеличили отступ сверху */
-        margin-bottom: 8px;
+        margin-top: 16px;          /* было 28px — уменьшили */
+        margin-bottom: 0;
     }
     
     .profile-header-card {
-        margin-bottom: 20px;       /* дополнительный воздух снизу всей карточки */
+        margin-bottom: 20px;
     }
     
     .empty-profile-state {
