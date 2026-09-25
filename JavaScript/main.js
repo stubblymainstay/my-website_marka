@@ -7,7 +7,7 @@ const products = [
         discount: 67,
         rating: 4.7,
         reviews: 198,
-        image: "icons/обувь.png"          // было "../icons/обувь.png"
+        image: "icons/обувь.png"        
     },
     {
         id: 2,
