@@ -192,12 +192,12 @@ input:checked + .slider:before {
     background: #d4d4d4;
 }
 
-/* ===== Вкладки — исправленный отступ ===== */
+/* ===== Вкладки (Десктоп) ===== */
 .profile-tabs {
     display: flex;
     gap: 12px;
-    margin-top: 16px;           /* было 30px — уменьшили */
-    padding: 0 40px 16px;       /* добавили отступ снизу */
+    margin-top: 16px;
+    padding: 0 40px 32px; 
 }
 
 .tab-btn {
@@ -332,11 +332,11 @@ input:checked + .slider:before {
         padding: 16px;
     }
     
-    /* ===== Мобильные вкладки — исправленный отступ ===== */
+    /* ===== Мобильные вкладки — увеличенный отступ для мобильной адаптации ===== */
     .profile-tabs {
-        padding: 0 16px 12px;      /* отступ снизу */
+        padding: 0 16px 32px;      /* 32px даст отличный запас свободного места снизу */
         justify-content: center;
-        margin-top: 16px;          /* было 28px — уменьшили */
+        margin-top: 16px;          
         margin-bottom: 0;
     }
     
