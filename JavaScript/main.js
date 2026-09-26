@@ -7,7 +7,7 @@ const products = [
         discount: 67,
         rating: 4.7,
         reviews: 198,
-        image: "../icons/обувь.png"
+        image: "icons/обувь.png"
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ const products = [
         discount: 70,
         rating: 4.8,
         reviews: 193,
-        image: "../icons/Шейкер.png"
+        image: "icons/Шейкер.png"
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ const products = [
         discount: 88,
         rating: 4.7,
         reviews: 18511,
-        image: "../icons/пакеты.png"
+        image: "icons/пакеты.png"
     },
     {
         id: 4,
@@ -37,7 +37,7 @@ const products = [
         discount: 85,
         rating: 4.3,
         reviews: 193,
-        image: "../icons/кассеты.png"
+        image: "icons/кассеты.png"
     },
     {
         id: 5,
@@ -47,7 +47,7 @@ const products = [
         discount: 87,
         rating: 4.9,
         reviews: 50230,
-        image: "../icons/трусы.webp"
+        image: "icons/трусы.webp"
     },
     {
         id: 6,
@@ -57,7 +57,7 @@ const products = [
         discount: 73,
         rating: 4.9,
         reviews: 3203,
-        image: "../icons/РУЧКИ.webp"
+        image: "icons/РУЧКИ.webp"
     },
     {
         id: 7,
@@ -67,7 +67,7 @@ const products = [
         discount: 85,
         rating: 4.9,
         reviews: 2300,
-        image: "../icons/ГЕЛЬ.webp"
+        image: "icons/ГЕЛЬ.webp"
     },
     {
         id: 8,
@@ -77,7 +77,7 @@ const products = [
         discount: 78,
         rating: 4.8,
         reviews: 25043,
-        image: "../icons/КОНФЕТЫ.webp"
+        image: "icons/КОНФЕТЫ.webp"
     },
     {
         id: 9,
@@ -97,7 +97,7 @@ const products = [
         discount: 88,
         rating: 4.8,
         reviews: 186603,
-        image: "../icons/ДУХИ.webp"
+        image: "icons/ДУХИ.webp"
     }
 ];
 
