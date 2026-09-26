@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Marka — Избранное</title>
+    <link rel="stylesheet" href="../css/favorites.css">
+    <link rel="icon" href="../icons/ЛОГОТИП.png" type="image/png">
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="../index.html" style="display: flex; align-items: center; gap: 6px;">
+                        <img src="../icons/ЛОГОТИП.png" alt="Marka" class="logo-img">
+                    </a>
+                </div>
+                <button class="menu-btn" id="menuBtn" aria-label="Каталог">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="search-box" id="searchBox">
+                    <img src="../icons/ЛУПА.png" alt="Поиск" class="search-icon">
+                    <input type="text" placeholder="Найти товары" id="searchInput">
+                    <div class="search-controls" id="searchControls">
+                        <button type="button" class="search-clear" id="searchClear" aria-label="Очистить">
+                            <img src="../icons/крестик.png" alt="Очистить">
+                        </button>
+                        <button type="button" class="search-submit" id="searchSubmit">Найти</button>
+                    </div>
+                </div>
+                <div class="header-actions desktop-only">
+                    <a href="favorites.html" class="action-btn active-nav" title="Избранное">
+                        <div class="icon-mask" style="-webkit-mask-image: url('../icons/избранное.svg'); mask-image: url('../icons/избранное.svg');"></div>
+                        <span class="action-label">Избранное</span>
+                    </a>
+                    <a href="cart.html" class="action-btn" title="Корзина">
+                        <div class="icon-mask" style="-webkit-mask-image: url('../icons/КОРЗИНА.svg'); mask-image: url('../icons/КОРЗИНА.svg');"></div>
+                        <span class="action-label">Корзина</span>
+                    </a>
+                    <a href="profile.html" class="action-btn" title="Профиль">
+                        <div class="icon-mask" style="-webkit-mask-image: url('../icons/профиль.svg'); mask-image: url('../icons/профиль.svg');"></div>
+                        <span class="action-label">Профиль</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="catalog-popup" id="catalogPopup">
+                <a href="#" class="catalog-item sale">РАСПРОДАЖА</a>
+                <a href="#" class="catalog-item">Товары из-за рубежа</a>
+                <a href="#" class="catalog-item">Электроника</a>
+                <a href="#" class="catalog-item">Одежда и обувь</a>
+                <a href="#" class="catalog-item">Бытовая техника</a>
+                <a href="#" class="catalog-item">Дом и интерьер</a>
+                <a href="#" class="catalog-item">Мебель</a>
+                <a href="#" class="catalog-item">Красота и здоровье</a>
+                <a href="#" class="catalog-item">Аптека и БАДы</a>
+                <a href="#" class="catalog-item">Спорт и отдых</a>
+                <a href="#" class="catalog-item">Детские товары</a>
+                <a href="#" class="catalog-item">Продукты и напитки</a>
+                <a href="#" class="catalog-item">Строительство и ремонт</a>
+                <a href="#" class="catalog-item">Авто и мото</a>
+                <a href="#" class="catalog-item">Ювелирные украшения</a>
+                <a href="#" class="catalog-item">Сад и огород</a>
+                <a href="#" class="catalog-item">Книги и хобби</a>
+                <a href="#" class="catalog-item">Игры и консоли</a>
+                <a href="#" class="catalog-item">Канцелярские товары</a>
+                <a href="#" class="catalog-item">Зоотовары</a>
+                <a href="#" class="catalog-item">Цифровые товары</a>
+                <a href="#" class="catalog-item">Подарки</a>
+            </div>
+
+            <nav class="nav-categories" id="navCategories">
+                <a href="#" class="nav-item sale">РАСПРОДАЖА</a>
+                <a href="#" class="nav-item">Электроника</a>
+                <a href="#" class="nav-item">Одежда и обувь</a>
+                <a href="#" class="nav-item">Дом и интерьер</a>
+                <a href="#" class="nav-item">Красота и здоровье</a>
+                <a href="#" class="nav-item">Спорт и отдых</a>
+                <a href="#" class="nav-item">Детские товары</a>
+                <a href="#" class="nav-item">Продукты и напитки</a>
+                <a href="#" class="nav-item">Авто и мото</a>
+                <a href="#" class="nav-item">Книги и хобби</a>
+                <a href="#" class="nav-item">Зоотовары</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="favorites-page">
+        <div class="container">
+            <h1 class="page-title">Избранное</h1>
+            <div class="empty-state">
+                <img src="../icons/сердце_избранное.png" alt="Избранное пусто" class="empty-heart-img">
+                <h2>В избранном пока пусто</h2>
+                <p>Присмотритесь к товарам,<br>которые собрали для вас</p>
+            </div>
+            <div class="recommendations">
+                <h2 class="section-title">Достойны первого сердечка</h2>
+                <div class="products-grid" id="favoritesProductsGrid"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-accordion">
+                <details class="footer-details">
+                    <summary>Категории</summary>
+                    <ul>
+                        <li><a href="#">Досуг и развлечения</a></li>
+                        <li><a href="#">Мебель</a></li>
+                        <li><a href="#">Бытовая техника</a></li>
+                        <li><a href="#">Гигиена</a></li>
+                        <li><a href="#">Электроника</a></li>
+                        <li><a href="#">Одежда и обувь</a></li>
+                        <li><a href="#">Товары для дома</a></li>
+                        <li><a href="#">Аптека</a></li>
+                        <li><a href="#">Красота и уход</a></li>
+                        <li><a href="#">Хобби и творчество</a></li>
+                        <li><a href="#">Дача и сад</a></li>
+                        <li><a href="#">Книги</a></li>
+                        <li><a href="#">Товары для школы и офиса</a></li>
+                        <li><a href="#">Спортивные товары</a></li>
+                        <li><a href="#">Товары для животных</a></li>
+                        <li><a href="#">Строительство и ремонт</a></li>
+                        <li><a href="#">Детские товары</a></li>
+                        <li><a href="#">Ювелирные украшения</a></li>
+                    </ul>
+                </details>
+                <details class="footer-details">
+                    <summary>Покупателям</summary>
+                    <ul>
+                        <li><a href="#">Как выбрать товар</a></li>
+                        <li><a href="#">Оплата и доставка</a></li>
+                        <li><a href="#">Покупайте как юрлицо</a></li>
+                        <li><a href="#">О сервисе</a></li>
+                        <li><a href="#">Возвраты</a></li>
+                        <li><a href="#">Журнал Маркета</a></li>
+                    </ul>
+                </details>
+                <details class="footer-details">
+                    <summary>Сотрудничество</summary>
+                    <ul>
+                        <li><a href="#">Новости компании</a></li>
+                        <li><a href="#">Реферальная программа</a></li>
+                        <li><a href="#">Производителям</a></li>
+                        <li><a href="#">Пункт выдачи заказов</a></li>
+                        <li><a href="#">Маркет нанимает</a></li>
+                    </ul>
+                </details>
+                <details class="footer-details">
+                    <summary>Продавцам</summary>
+                    <ul>
+                        <li><a href="#">Личный кабинет продавца</a></li>
+                        <li><a href="#">Продавайте на Маркете</a></li>
+                        <li><a href="#">Документация для партнёров</a></li>
+                        <li><a href="#">Сайт для партнёров</a></li>
+                    </ul>
+                </details>
+            </div>
+
+            <div class="footer-desktop">
+                <div class="footer-col">
+                    <h3>Категории</h3>
+                    <ul>
+                        <li><a href="#">Досуг и развлечения</a></li>
+                        <li><a href="#">Мебель</a></li>
+                        <li><a href="#">Бытовая техника</a></li>
+                        <li><a href="#">Гигиена</a></li>
+                        <li><a href="#">Электроника</a></li>
+                        <li><a href="#">Одежда и обувь</a></li>
+                        <li><a href="#">Товары для дома</a></li>
+                        <li><a href="#">Аптека</a></li>
+                        <li><a href="#">Красота и уход</a></li>
+                        <li><a href="#">Хобби и творчество</a></li>
+                        <li><a href="#">Дача и сад</a></li>
+                        <li><a href="#">Книги</a></li>
+                        <li><a href="#">Товары для школы и офиса</a></li>
+                        <li><a href="#">Спортивные товары</a></li>
+                        <li><a href="#">Товары для животных</a></li>
+                        <li><a href="#">Строительство и ремонт</a></li>
+                        <li><a href="#">Детские товары</a></li>
+                        <li><a href="#">Ювелирные украшения</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Покупателям</h3>
+                    <ul>
+                        <li><a href="#">Как выбрать товар</a></li>
+                        <li><a href="#">Оплата и доставка</a></li>
+                        <li><a href="#">Покупайте как юрлицо</a></li>
+                        <li><a href="#">О сервисе</a></li>
+                        <li><a href="#">Возвраты</a></li>
+                        <li><a href="#">Журнал Маркета</a></li>
+                    </ul>
+                    <h3 class="mt">Сотрудничество</h3>
+                    <ul>
+                        <li><a href="#">Новости компании</a></li>
+                        <li><a href="#">Реферальная программа</a></li>
+                        <li><a href="#">Производителям</a></li>
+                        <li><a href="#">Пункт выдачи заказов</a></li>
+                        <li><a href="#">Маркет нанимает</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Продавцам</h3>
+                    <ul>
+                        <li><a href="#">Личный кабинет продавца</a></li>
+                        <li><a href="#">Продавайте на Маркете</a></li>
+                        <li><a href="#">Документация для партнёров</a></li>
+                        <li><a href="#">Сайт для партнёров</a></li>
+                    </ul>
+                    <h3 class="mt">Мы в соцсетях</h3>
+                    <div class="socials">
+                        <a href="#" class="social-btn">
+                            <img src="../icons/VK.com-logo.svg" alt="ВКонтакте">
+                            <span>Вконтакте</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-promo">
+                <h3>Скачивайте так же наше мобильное приложение</h3>
+                <div class="app-buttons desktop-only">
+                    <a href="#"><img src="../icons/Ru_Store.svg" alt="RuStore"></a>
+                    <a href="#"><img src="../icons/Huawei.svg" alt="AppGallery"></a>
+                    <a href="#"><img src="../icons/apple.svg" alt="App Store"></a>
+                    <a href="#"><img src="../icons/google_play.svg" alt="Google Play"></a>
+                </div>
+                <div class="app-buttons mobile-only">
+                    <a href="#"><img src="../icons/RuStore_mobile.png" alt="RuStore"></a>
+                    <a href="#"><img src="../icons/Huawey_mobile.png" alt="AppGallery"></a>
+                    <a href="#"><img src="../icons/apple_mobile.png" alt="App Store"></a>
+                    <a href="#"><img src="../icons/google_mobile.png" alt="Google Play"></a>
+                </div>
+            </div>
+
+            <div class="footer-social-mobile">
+                <a href="#" class="social-btn">
+                    <img src="../icons/VK.com-logo.svg" alt="ВКонтакте">
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom desktop-only">
+            <p>© 2026 Marka. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <nav class="bottom-nav mobile-only">
+        <a href="profile.html" class="bottom-nav-item" title="Профиль">
+            <div class="icon-mask" style="-webkit-mask-image: url('../icons/профиль.svg'); mask-image: url('../icons/профиль.svg');"></div>
+        </a>
+        <a href="cart.html" class="bottom-nav-item" title="Корзина">
+            <div class="icon-mask" style="-webkit-mask-image: url('../icons/КОРЗИНА.svg'); mask-image: url('../icons/КОРЗИНА.svg');"></div>
+        </a>
+        <a href="../index.html" class="bottom-nav-item" title="Поиск">
+            <div class="icon-mask" style="-webkit-mask-image: url('../icons/ЛУПА.png'); mask-image: url('../icons/ЛУПА.png');"></div>
+        </a>
+        <a href="favorites.html" class="bottom-nav-item active-nav" title="Избранное">
+            <div class="icon-mask" style="-webkit-mask-image: url('../icons/избранное.svg'); mask-image: url('../icons/избранное.svg');"></div>
+        </a>
+    </nav>
+
+    <script src="../JavaScript/favorites.js"></script>
+</body>
+</html>
